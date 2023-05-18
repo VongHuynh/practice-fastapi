@@ -6,7 +6,7 @@ COPY . .
 
 RUN pip install --upgrade pip
 
-RUN pip install --no-cache-dir -r setup.txt
+RUN pip install -r setup.txt
 
 EXPOSE 8000
 

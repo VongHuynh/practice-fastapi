@@ -4,6 +4,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    container_name: app2
     ports:
       - "8001:8000"
     # volumes:
