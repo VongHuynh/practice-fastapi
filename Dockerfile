@@ -6,6 +6,8 @@ COPY app .
 
 COPY main.py .
 
+COPY setup.txt .
+
 RUN pip install --upgrade pip
 
 RUN pip install --no-cache-dir -r setup.txt
