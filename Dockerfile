@@ -2,11 +2,7 @@ FROM python:3.10-slim
 
 WORKDIR /app
 
-COPY app .
-
-COPY main.py .
-
-COPY setup.txt .
+COPY . .
 
 RUN pip install --upgrade pip
 
