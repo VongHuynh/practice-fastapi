@@ -6,7 +6,7 @@ services:
     ports:
       - 81:80
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./lb-nginx.conf:/etc/nginx/nginx.conf
     networks:
       - nginx-network
 
