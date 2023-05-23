@@ -10,7 +10,8 @@ git checkout main
 echo "Build app 1"
 docker stop fastapiapp1 | true
 docker rmi fastapp1 | true
-until docker build -t fastAPIApp1 .
+
+until docker build -t fastapiapp1 .
 
 do
   echo "Wating build fastAPIApp1"
