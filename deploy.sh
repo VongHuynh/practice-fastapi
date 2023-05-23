@@ -40,4 +40,5 @@ git checkout main
 
 docker-compose up -f nginx.docker-compose.yml -d
 
-echo "Deploy success"
+echo "Deploy success" 
+#
