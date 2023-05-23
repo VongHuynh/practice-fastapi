@@ -34,6 +34,8 @@ do
   sleep 2
 done
 
+git checkout main
+
 docker-compose -f demo-loadbalance.docker-compose.yml up -d
 
 echo "Deploy success" 
