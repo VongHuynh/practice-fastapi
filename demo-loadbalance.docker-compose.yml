@@ -11,12 +11,12 @@ services:
       - nginx-network
 
   fastAPIApp1:
-    image: fastAPIApp1
+    image: fastapiapp1
     networks:
       - nginx-network
 
   fastAPIApp2:
-    image: fastAPIApp2
+    image: fastapiapp2
     networks:
       - nginx-network
 
