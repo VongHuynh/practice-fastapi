@@ -23,7 +23,7 @@ pip install -r setup.txt
 - First run the following command
 ```bash
 python main.py
-# uvicorn main:app --reload
+# uvicorn api:app --host 0.0.0.0 --port 8000
 ```
 - folowing the URL to access
 ```
