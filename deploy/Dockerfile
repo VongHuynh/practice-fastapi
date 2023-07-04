@@ -10,4 +10,4 @@ RUN pip install -r requirement.txt
 
 EXPOSE 8000
 
-CMD ["python","main.py"]
+CMD ["python","./src/main.py"]
