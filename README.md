@@ -22,7 +22,8 @@ pip install -r setup.txt
 ```
 - First run the following command
 ```bash
-python main.py 
+python main.py
+# uvicorn main:app --reload
 ```
 - folowing the URL to access
 ```
