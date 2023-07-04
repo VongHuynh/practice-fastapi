@@ -1,7 +1,10 @@
-from fastapi import FastAPI
+from fastapi import APIRouter
 
-app = FastAPI()
+router = APIRouter(
+    prefix="/operations",
+    tags=["Operation"]
+)
 
-@app.get('/hello')
+@router.get("/long_operation")
 def read_root():
     return {'Hello': 'World load balance app 1'}

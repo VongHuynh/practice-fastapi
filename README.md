@@ -18,7 +18,7 @@ source venv/bin/activate
 ```
 - Install libraries
 ```
-pip install -r setup.txt
+pip install -r requirement.txt
 ```
 - First run the following command
 ```bash
