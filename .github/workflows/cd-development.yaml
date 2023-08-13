@@ -8,6 +8,9 @@ on:
   workflow_dispatch: 
 
 jobs:
+  placeholder:
+    runs-on: ubuntu-latest
+    
   deploy-server:
     runs-on: ubuntu-latest
     environment: "develop"
