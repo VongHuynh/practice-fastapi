@@ -5,9 +5,10 @@ on:
     workflows: ["ci development"] 
     types:
       - completed
+  workflow_dispatch: 
 
 jobs:
-  push-image:
+  deploy-server:
     runs-on: ubuntu-latest
     environment: "develop"
     needs: ["ci-development"]
