@@ -29,4 +29,4 @@ jobs:
               uses: docker/build-push-action@v4
               with:
                 push: false
-                tags: huynhvanvong/fastapi-test:$RUN_NUMBER
+                tags: huynhvanvong/fastapi-test:latest
