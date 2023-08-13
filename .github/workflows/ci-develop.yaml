@@ -1,0 +1,32 @@
+name: ci development
+on:
+    push:
+        branches: [main]
+    pull_request:
+        types: [opened, reopened, synchronize, labeled, unlabeled]
+    workflow_dispatch: 
+
+jobs:
+    ci-development:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: mheap/github-action-required-labels@v5
+              with:
+                mode: exactly
+                count: 0
+                labels: "do not build"
+
+            - name: Checkout
+              uses: actions/checkout@v2
+
+            - name: Set up QEMU
+              uses: docker/setup-qemu-action@v2
+
+            - name: Set up Docker Buildx
+              uses: docker/setup-buildx-action@v2
+            
+            - name: Build and push docker image
+              uses: docker/build-push-action@v4
+              with:
+                push: true
+                tags: huynhvanvong/fastapi-test:$RUN_NUMBER
