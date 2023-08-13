@@ -31,11 +31,20 @@ jobs:
                 push: false
                 tags: huynhvanvong/fastapi-test:${{ github.run_number }}
 
-    push-image:
+    deploy-development:
         runs-on: ubuntu-latest
         environment: "develop"
         needs: ["ci-development"]
         steps:
             - name: "complete"
               run: |
-                    echo "ok"
+                    echo "deploy development ok"
+    
+    deploy-prod:
+        runs-on: ubuntu-latest
+        environment: "prod"
+        needs: ["ci-development"]
+        steps:
+            - name: "complete"
+              run: |
+                    echo "deploy prod ok"
