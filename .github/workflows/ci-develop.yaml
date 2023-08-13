@@ -3,7 +3,7 @@ on:
     push:
         branches: [main]
     pull_request:
-        types: [closed, labeled, unlabeled]
+        types: [closed, opened]
     workflow_dispatch: 
 
 jobs:
@@ -29,4 +29,13 @@ jobs:
               uses: docker/build-push-action@v4
               with:
                 push: false
-                tags: huynhvanvong/fastapi-test:latest
+                tags: huynhvanvong/fastapi-test:${{ github.run_number }}
+
+    push-image:
+        runs-on: ubuntu-latest
+        environment: "develop"
+        needs: ["ci-development"]
+        steps:
+            - name: "complete"
+              run: |
+                    echo "ok"
