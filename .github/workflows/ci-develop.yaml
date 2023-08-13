@@ -28,5 +28,5 @@ jobs:
             - name: Build and push docker image
               uses: docker/build-push-action@v4
               with:
-                push: true
+                push: false
                 tags: huynhvanvong/fastapi-test:$RUN_NUMBER
